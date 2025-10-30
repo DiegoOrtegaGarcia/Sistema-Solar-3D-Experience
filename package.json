@@ -5,11 +5,13 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fontsource/roboto": "5.2.5",
@@ -19,6 +21,7 @@
     "vue": "^3.5.13",
     "vuetify": "^3.8.1"
   },
+  "homepage": "https://github.com/DiegoOrtegaGarcia/Sistema-Solar-3D-Experience",
   "devDependencies": {
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.9.0",
@@ -27,6 +30,7 @@
     "@vue/tsconfig": "^0.7.0",
     "eslint": "^9.23.0",
     "eslint-config-vuetify": "^4.0.0",
+    "gh-pages": "^6.3.0",
     "npm-run-all2": "^7.0.2",
     "pinia": "^3.0.1",
     "sass-embedded": "^1.86.3",

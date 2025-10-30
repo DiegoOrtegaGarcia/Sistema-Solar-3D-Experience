@@ -2,7 +2,6 @@
   <v-app>
     <v-main>
       <v-container class="pa-0" fluid>
-        <!-- Sección inicial -->
         <section class="hero-section">
           <v-row align="center" class="fill-height ma-0" justify="center">
             <v-col class="text-center" cols="12" md="8">
@@ -13,7 +12,6 @@
           </v-row>
         </section>
 
-        <!-- Sección de información -->
         <section class="info-section">
           <v-container>
             <v-row>
@@ -48,7 +46,6 @@
           </v-container>
         </section>
 
-        <!-- Sección 3D -->
         <section ref="canvasSection" class="canvas-section">
           <v-container>
             <v-card class="canvas-card" elevation="12">
@@ -92,13 +89,11 @@
           </v-container>
         </section>
 
-        <!-- Modal del planeta -->
         <PlanetModal
           :planet-id="selectedPlanetId"
           :transition="modalTransition"
           @close="closePlanetModal"
         />
-        <!-- Footer -->
         <footer class="app-footer">
           <v-container>
             <v-row align="center" justify="center">
@@ -142,7 +137,6 @@
 </script>
 
 <style scoped>
-/* Estilos generales */
 :root {
   --primary-color: #3f51b5;
   --secondary-color: #ff4081;
@@ -150,7 +144,6 @@
   --light-color: #e8eaf6;
 }
 
-/* Sección hero */
 .hero-section {
   height: 100vh;
   background: linear-gradient(135deg, var(--dark-color) 0%, #4a148c 100%);
@@ -187,7 +180,6 @@
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-/* Secciones */
 .info-section {
   padding: 80px 0;
   background-color: white;
@@ -309,7 +301,6 @@
   font-size: 0.9rem;
 }
 
-/* Scroll hint */
 .scroll-hint {
   animation: bounce 2s infinite;
   position: absolute;
@@ -338,7 +329,6 @@
   60% {transform: translateY(-10px);}
 }
 
-/* Responsive */
 @media (max-width: 960px) {
   .hero-title {
     font-size: 3rem;

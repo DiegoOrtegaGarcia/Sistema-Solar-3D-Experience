@@ -28,7 +28,7 @@ export const usePlanetRender = (props: RouteParams) => {
           sphereGeomatry,
           moonMaterial,
         )
-        moonMesh.scale.setScalar(moon.radius)
+        moonMesh.scale.setScalar(moon.radius - 0.5)
         planet.add(moonMesh)
       }
     }
@@ -65,7 +65,7 @@ export const usePlanetRender = (props: RouteParams) => {
 
   const animate = () => {
     animationId = requestAnimationFrame(animate)
-    // planet.rotation.y += 0.01 // Rotación automática
+    planet.rotation.y += planets[props.id - 1].speed// Rotación automática
 
     for (const [index, child] of planet.children.entries()) {
       const mesh = child as THREE.Mesh
