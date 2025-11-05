@@ -1,5 +1,6 @@
 {
   "name": "veutify-proyect",
+  "homepage": "https://github.com/DiegoOrtegaGarcia/Sistema-Solar-3D-Experience",
   "private": true,
   "type": "module",
   "version": "0.0.0",
@@ -21,7 +22,6 @@
     "vue": "^3.5.13",
     "vuetify": "^3.8.1"
   },
-  "homepage": "https://github.com/DiegoOrtegaGarcia/Sistema-Solar-3D-Experience",
   "devDependencies": {
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.9.0",
